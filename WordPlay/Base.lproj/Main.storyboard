@@ -88,7 +88,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hum-ka-Mza" kind="show" identifier="adjectiveSegue" id="MLN-Yv-Xe2"/>
+                                    <segue destination="Hum-ka-Mza" kind="show" id="MLN-Yv-Xe2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,6 +98,9 @@
                             <constraint firstItem="wbm-DS-GYV" firstAttribute="top" secondItem="V69-cn-NKf" secondAttribute="bottom" constant="59" id="eOl-7f-sJG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adjectiveTextField" destination="wbm-DS-GYV" id="SmX-Mr-ehB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oO0-8v-xmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +149,9 @@
                             <constraint firstItem="SVj-gg-3SX" firstAttribute="centerX" secondItem="Tm4-hs-Imj" secondAttribute="centerX" id="tAl-mJ-sEo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="verbTextField" destination="hoQ-uj-zZf" id="myU-oP-FhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8up-Tf-U4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,9 +209,9 @@
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="adjectiveLabel" destination="ft3-dn-XZM" id="rPc-fH-k4B"/>
-                        <outlet property="nounLabel" destination="ft3-dn-XZM" id="3zN-ZQ-yeW"/>
-                        <outlet property="verbLabel" destination="ft3-dn-XZM" id="mzj-uc-Vhy"/>
+                        <outlet property="adjectiveLabel" destination="gcW-dX-F17" id="jBY-TL-zKB"/>
+                        <outlet property="nounLabel" destination="oAU-L7-7fj" id="ZmJ-bh-JKw"/>
+                        <outlet property="verbLabel" destination="Tgr-0r-RJA" id="zA7-3w-z4q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-YW-C2m" userLabel="First Responder" sceneMemberID="firstResponder"/>

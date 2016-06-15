@@ -9,6 +9,12 @@
 import UIKit
 
 class AdjectiveViewController: UIViewController {
+    
+    @IBOutlet weak var adjectiveTextField: UITextField!
+    
+    var nounFromScreen2 : String?
+    var verbFromScreen2 : String?
+    var adjectiveFromScreen2 : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +23,15 @@ class AdjectiveViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        //link to StoryViewController
         let sVC = segue.destinationViewController as! StoryViewController
+        
+        sVC.noun = nounFromScreen2
+        sVC.verb = verbFromScreen2
+        sVC.adjective = adjectiveTextField.text
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

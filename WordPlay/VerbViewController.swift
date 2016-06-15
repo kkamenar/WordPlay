@@ -9,6 +9,10 @@
 import UIKit
 
 class VerbViewController: UIViewController {
+    
+    @IBOutlet weak var verbTextField: UITextField!
+    
+    var nounFromScreen1 : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +22,14 @@ class VerbViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        //link to AdjectiveViewController
         let aVC = segue.destinationViewController as! AdjectiveViewController
+        
+        aVC.nounFromScreen2 = nounFromScreen1
+        aVC.verbFromScreen2 = verbTextField.text
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,9 +10,10 @@ import UIKit
 
 class StoryViewController: UIViewController {
 
-    @IBOutlet var nounLabel: UIView!
-    @IBOutlet var verbLabel: UIView!
-    @IBOutlet var adjectiveLabel: UIView!
+
+    @IBOutlet weak var nounLabel: UILabel!
+    @IBOutlet weak var verbLabel: UILabel!
+    @IBOutlet weak var adjectiveLabel: UILabel!
     
     var noun : String?
     var verb : String?
@@ -20,6 +21,10 @@ class StoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nounLabel.text = noun
+        verbLabel.text = verb
+        adjectiveLabel.text = adjective
 
         // Do any additional setup after loading the view.
     }
