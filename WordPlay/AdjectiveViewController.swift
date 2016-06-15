@@ -31,12 +31,32 @@ class AdjectiveViewController: UIViewController {
         sVC.verb = verbFromScreen2
         sVC.adjective = adjectiveTextField.text
         
+        let screenAdjective = adjectiveTextField.text
+        
+        let title3 = nounFromScreen2! + " | " +  verbFromScreen2! + " | " + screenAdjective!
+        
+        sVC.title = title3
+        
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegueWithIdentifier(noun: String, sender: AnyObject?) -> Bool {
+        
+        var truth = true
+        
+        let adjective = adjectiveTextField.text
+        
+        if adjective == ""
+        {
+            truth = false
+        }
+        
+        return truth
     }
     
 

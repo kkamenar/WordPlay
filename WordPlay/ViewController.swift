@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nounTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,13 +19,36 @@ class ViewController: UIViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+            
         // link to VerbViewController
         let vVC = segue.destinationViewController as! VerbViewController
-        
+            
         vVC.nounFromScreen1 = nounTextField.text
         
+        let screenNoun = nounTextField.text
+        
+        let title1 = screenNoun
+        
+        vVC.title = title1
+        
+        
+    }
+ 
+    
+    override func shouldPerformSegueWithIdentifier(noun: String, sender: AnyObject?) -> Bool {
+        
+        var truth = true
+        
+        let noun = nounTextField.text
+        
+        if noun == ""
+        {
+            truth = false
+        }
+        
+        return truth
     }
 
     override func didReceiveMemoryWarning() {

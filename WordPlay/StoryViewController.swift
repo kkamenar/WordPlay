@@ -11,9 +11,8 @@ import UIKit
 class StoryViewController: UIViewController {
 
 
-    @IBOutlet weak var nounLabel: UILabel!
-    @IBOutlet weak var verbLabel: UILabel!
-    @IBOutlet weak var adjectiveLabel: UILabel!
+
+    @IBOutlet weak var storyLabel: UILabel!
     
     var noun : String?
     var verb : String?
@@ -22,17 +21,20 @@ class StoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nounLabel.text = noun
-        verbLabel.text = verb
-        adjectiveLabel.text = adjective
+        
+        let story1 = "While walking down the street, " + noun!
+        let story2 = " "  + verb! + " into a "
+        let story3 = adjective! + " friend"
+        
+        let story = story1 + story2 + story3
+        
+        storyLabel.text = story
+
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
 
     /*

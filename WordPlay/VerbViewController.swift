@@ -29,6 +29,13 @@ class VerbViewController: UIViewController {
         aVC.nounFromScreen2 = nounFromScreen1
         aVC.verbFromScreen2 = verbTextField.text
         
+        let screenVerb = verbTextField.text
+        
+        
+        let title2 = nounFromScreen1! + " | " +  screenVerb!
+        
+        aVC.title = title2
+        
         
     }
 
@@ -37,6 +44,19 @@ class VerbViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldPerformSegueWithIdentifier(noun: String, sender: AnyObject?) -> Bool {
+        
+        var truth = true
+        
+        let verb = verbTextField.text
+        
+        if verb == ""
+        {
+            truth = false
+        }
+        
+        return truth
+    }
 
     /*
     // MARK: - Navigation
